@@ -1,4 +1,5 @@
 import time
+import os
 ##
 #from linebot import LineBotApi, WebhookParser
 #from linebot.exceptions import InvalidSignatureError, LineBotApiError
@@ -8,7 +9,7 @@ import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 ##
-
+doc_key = os.environ.get('doc_key', None)
 
 ##line_bot_api.get_profile(event.source.user_id)
 ####
@@ -41,7 +42,7 @@ def connectSheet():  ##串接
     creds = ServiceAccountCredentials.from_json_keyfile_name("./DD/line-bot-test-314017-8251d384c729.json", scope)
     client = gspread.authorize(creds)
     # spreadSheet = client.open("簽到表")#或是可以用 add_worksheet("11月", 100, 100) 來新增
-    spreadSheet = client.open_by_key("1_mChM0pbq54jJnDvhhy8eYuUGRuCHjFUxpj7TuMOAW4")
+    spreadSheet = client.open_by_key(doc_key)
     #spreadSheet.
     #sheet = spreadSheet.worksheet("工作表1") # 利用 title 來抓 sheet
     return spreadSheet
@@ -128,51 +129,3 @@ sheet = spreadSheet.worksheet("aaa")
 SignIn(spreadSheet,"aaa",text)
 #changeDay(spreadSheet)
 '''
-
-
-#a = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-
-#print(a.split(" ")[0])
-#print(a.split(" ")[1])
-#print(type(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
-
-#scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/drive']
-#creds = ServiceAccountCredentials.from_json_keyfile_name("./line-bot-test-314017-8251d384c729.json", scope)
-#client = gspread.authorize(creds)
-#spreadSheet = client.open_by_key("1_mChM0pbq54jJnDvhhy8eYuUGRuCHjFUxpj7TuMOAW4")
-#spreadSheet.add_worksheet(title="aaa", rows='2000', cols='3')
-#spreadSheet = client.open("簽到表")#或是可以用 add_worksheet("11月", 100, 100) 來新增
-#print(spreadSheet.worksheets())
-#print(spreadSheet.worksheets()[0])
-#spreadSheet = client.open_by_key("1_mChM0pbq54jJnDvhhy8eYuUGRuCHjFUxpj7TuMOAW4")
-#sheet = spreadSheet.worksheet("工作表1") # 利用 title 來抓 sheet
-
-
-#text = "878787"
-#spreadSheet = connectSheet()
-#sheet = findtoday(spreadSheet)
-#SignIn(sheet, text)
-
-
-#header = ['1','2','3']
-#header_row = sheet.range("A2:C2")
-#print(type(header_row))
-
-#print(type(header_row[0]))
-#print(list(enumerate(header_row)))
-
-#for index,cell in enumerate(header_row):
-#    cell.value = header[index]
-#cell_list = sheet.range('A11:C13')
-import random
-#for cell in cell_list:
-#  cell.value = 87
-
-#sheet.update_cells(cell_list)
-#sheet.update_cell(3,3,"aaaaaaa")
-#sheet.update('A17',"98")
-#sheet.update('A17:D17', [[11, 22,33,44]])
-############
-#
-#api串接成功
-#

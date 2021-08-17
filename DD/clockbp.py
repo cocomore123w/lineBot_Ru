@@ -4,9 +4,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from DD import lib
 from DD import  dataBackup
 ##
-#sched = BlockingScheduler()
 
-#@sched.scheduled_job('cron', hour = 0,minute = 24)
 def scheduled_job():
 
     spreadSheet = dataBackup.connectSheet()
@@ -14,4 +12,3 @@ def scheduled_job():
     dataBackup.write(sheet,lib.DataFormJson)
     print("data save finish")
 scheduled_job()
-#sched.start()

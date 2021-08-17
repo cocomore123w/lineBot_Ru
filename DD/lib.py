@@ -34,62 +34,6 @@ def tag_reply(text,data): #根據tag回覆
     else:
         return '我不知道你在說啥欸'
 #############
-##
-##回覆最長的kw
-def keyword_reply(text,data):
-    try:
-        key = data.keys()
-        matchAns = []
-        index = []
-        for i in range(0, len(list(key))):
-            if text.find(list(key)[i]) != -1:
-                #return data[list(a)[i]] # data.get(text)
-                matchAns.append(len(list(key)[i]))
-                index.append(i)
-                #print("aa")
-                #print(data[list(a)[i]])
-        if matchAns.count(max(matchAns)) > 1:
-            array = np.array(matchAns)
-            ele = index[np.where(array == max(matchAns))[0][
-            random.randint(0, matchAns.count(max(matchAns)) - 1)]]  ##      找到矩陣元素的index
-            ##
-            # print(ele[random.randint(0,matchAns.count(max(matchAns))-1)])
-            rpy = list(key)[ele]
-        else:
-            ele = max(matchAns)
-            rpy = list(key)[index[matchAns.index(ele)]]
-        return data[rpy]
-
-    except ValueError:
-        return None
-    #if data.find(text) != None:
-################
-##
-##隨機回覆一個符合的kw
-def keyword_reply_v2(text,data):
-    key = data.keys()
-    matchAns = []
-    index = []
-    for i in range(0, len(list(key))):
-        if text.find(list(key)[i]) != -1:
-            #return data[list(a)[i]] # data.get(text)
-            matchAns.append(len(list(key)[i]))
-            index.append(i)
-    #print(index)
-    #print(matchAns)
-    if len(matchAns) > 1:
-        ele = index[random.randint(0, len(matchAns) - 1)]
-        #print(ele)
-        ##
-        # print(ele[random.randint(0,matchAns.count(max(matchAns))-1)])
-        rpy = list(key)[ele]
-    else:
-        ele = max(matchAns)
-        rpy = list(key)[index[matchAns.index(ele)]]
-    return data[rpy]
-
-
-
 def flag_value(bool):
     return bool
 
