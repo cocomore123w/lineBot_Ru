@@ -1,0 +1,59 @@
+{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://media.discordapp.net/attachments/773455729985454100/845023522639970334/20201125_222945.jpg?width=468&height=468",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "測試型初號機",
+        "size": "xl",
+        "weight": "bold",
+        "color": "#0099ff",
+        "margin": "none",
+        "decoration": "none",
+        "align": "center",
+        "offsetBottom": "md",
+        "contents": []
+      },
+      {
+        "type": "text",
+        "text": "るしあ很可愛",
+        "offsetBottom": "none",
+        "offsetTop": "md",
+        "align": "center",
+        "decoration": "none",
+        "weight": "regular"
+      },
+      {
+        "type": "text",
+        "text": "如果你沒看過的話快去YT看看 OUO",
+        "offsetTop": "md",
+        "weight": "regular"
+      }
+    ],
+    "borderWidth": "none"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "message",
+          "label": "使用說明",
+          "text": "#使用說明"
+        },
+        "style": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "指令說明",
+            "size": "xxl",
+            "color": "#0099ff",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "text",
+            "text": "一般指令輸入#指令",
+            "offsetStart": "none",
+            "align": "center",
+            "weight": "bold",
+            "size": "lg"
+          },
+          {
+            "type": "separator"
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "新增"
+          },
+          {
+            "type": "text",
+            "text": "#add 指令 回覆內容"
+          },
+          {
+            "type": "text",
+            "text": "刪除"
+          },
+          {
+            "type": "text",
+            "text": "#del 指令"
+          },
+          {
+            "type": "text",
+            "text": "指令表"
+          },
+          {
+            "type": "text",
+            "text": "#orderlist"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "關鍵字指令說明",
+            "color": "#0099ff",
+            "size": "xxl",
+            "align": "center",
+            "weight": "bold"
+          },
+          {
+            "type": "text",
+            "text": "對話出現即可觸發",
+            "weight": "bold",
+            "align": "center",
+            "size": "lg"
+          },
+          {
+            "type": "separator"
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "新增"
+          },
+          {
+            "type": "text",
+            "text": "#addkw 指令 回覆內容"
+          },
+          {
+            "type": "text",
+            "text": "刪除"
+          },
+          {
+            "type": "text",
+            "text": "#delkw 指令"
+          },
+          {
+            "type": "text",
+            "text": "指令表"
+          },
+          {
+            "type": "text",
+            "text": "#kwlist"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Youtube開台查詢",
+            "color": "#0099ff",
+            "size": "xxl",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "text",
+            "text": "#live 對象",
+            "size": "lg",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "separator"
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "新增"
+          },
+          {
+            "type": "text",
+            "text": "#addlive 對象 youtube頻道網址"
+          },
+          {
+            "type": "text",
+            "text": "刪除"
+          },
+          {
+            "type": "text",
+            "text": "#dellive 對象"
+          },
+          {
+            "type": "text",
+            "text": "查詢表"
+          },
+          {
+            "type": "text",
+            "text": "#livelist"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "投票指令",
+            "size": "xxl",
+            "color": "#0099ff",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "text",
+            "text": "發起投票並倒數兩分鐘計時",
+            "size": "lg",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "separator"
+          }
+        ]
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "首個指令為提案"
+          },
+          {
+            "type": "text",
+            "text": "#vote 主題"
+          },
+          {
+            "type": "text",
+            "text": "後續指令為投票"
+          },
+          {
+            "type": "text",
+            "text": "#vote 項目"
+          }
+        ]
+      }
+    }
+  ]
+}
